@@ -1,0 +1,10 @@
+21.Melyik tárgy nincsen a hálózat biztonsági és üzemeltetési specializáción?;A) Mesterséges Intelligencia alapjai;B) Felhő alapú szolgáltatások;C) Elektronika;D) Vállalati információs rendszerek II.
+22. Hány kredites a Hálózati adminisztráció tárgy?;A) 5;B) 4;C) 3;D) 2
+23. Milyen tantárgyra nem épít a Felhő alapú szolgáltatások tárgy?;A) Operációs rendszerek;B) Haladó programozás;C) Vállalati adminisztrációs rendszerek I.;D) Hálózati alapismeretek
+24. Melyik szoftvert használjuk Vállalati információs rendszerek II. tárgyon?;A) Oracle;B) Microsoft - Project 2019;C) Cisco Packet Tracker;D) AIMMS
+25. Melyik cég oklevelének a megszerzését nem támogatja a Neumann János Egyetem?;A) Cisco;B) Alcatel-Lucent;C) Mikrotik;D) Huawei
+26. Melyik VM szoftvert használjuk Hálózat adminisztráció tárgyon?;A) Red Hat Virtualization;B) IBM PowerVM;D) Microsoft Hyper-V;D) VMware
+27. Hányas Microsoft Servert használjuk Hálózati adminisztráció tárgyból?;A) 2022;B) 2023;C) 2024;D) 2025
+28. Ha teljesítenénk az összes Hálózat adminisztráció tárgyat az 5.félévben, összesen hány kreditet teljesítenénk?;A) 22;B) 23;C) 25;D) 30
+29. Milyen márkájú switch-eket konfigurálunk Számítógépes hálózatok konfigurálása és üzemeltetése tárgyon?;A) Cisco;B) Mikrotik;C) Forti;D) Enterasys
+30. Melyik Web Service-t használjuk Felhő alapú szolgáltatások tárgyon?;A) IBM;B) Amazon;C) Oracle;D) Google
