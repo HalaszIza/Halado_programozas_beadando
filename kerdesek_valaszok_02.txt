@@ -1,10 +1,10 @@
-21.Melyik tárgy nincsen a hálózat biztonsági és üzemeltetési specializáción?;A) Mesterséges Intelligencia alapjai;B) Felhő alapú szolgáltatások;C) Elektronika;D) Vállalati információs rendszerek II.
-22. Hány kredites a Hálózati adminisztráció tárgy?;A) 5;B) 4;C) 3;D) 2
-23. Milyen tantárgyra nem épít a Felhő alapú szolgáltatások tárgy?;A) Operációs rendszerek;B) Haladó programozás;C) Vállalati adminisztrációs rendszerek I.;D) Hálózati alapismeretek
-24. Melyik szoftvert használjuk Vállalati információs rendszerek II. tárgyon?;A) Oracle;B) Microsoft - Project 2019;C) Cisco Packet Tracker;D) AIMMS
-25. Melyik cég oklevelének a megszerzését nem támogatja a Neumann János Egyetem?;A) Cisco;B) Alcatel-Lucent;C) Mikrotik;D) Huawei
-26. Melyik VM szoftvert használjuk Hálózat adminisztráció tárgyon?;A) Red Hat Virtualization;B) IBM PowerVM;D) Microsoft Hyper-V;D) VMware
-27. Hányas Microsoft Servert használjuk Hálózati adminisztráció tárgyból?;A) 2022;B) 2023;C) 2024;D) 2025
-28. Ha teljesítenénk az összes Hálózat adminisztráció tárgyat az 5.félévben, összesen hány kreditet teljesítenénk?;A) 22;B) 23;C) 25;D) 30
-29. Milyen márkájú switch-eket konfigurálunk Számítógépes hálózatok konfigurálása és üzemeltetése tárgyon?;A) Cisco;B) Mikrotik;C) Forti;D) Enterasys
-30. Melyik Web Service-t használjuk Felhő alapú szolgáltatások tárgyon?;A) IBM;B) Amazon;C) Oracle;D) Google
+21. Hány biten tárolódik az IPv4-es cím?;A) 64;B) 16;C) 32;D) 128
+22. Hány biten tárolódik az IPv6-os cím?;A) 128;B) 32;C) 16;D) 64
+23. Hogyan néz ki az APIPA cím?;A) 192.168.x.x;B) 255.255.x.x;C) 169.254.x.x;D) 168.254.x.x
+24. Melyik a középső szintje a felhőszolgáltatásoknak?;A) Infrastracture as a Service;B) Software as a Service;C) Private Cloud;D) Platform as a Servivce
+25. Melyik NEM előnye a virtuakizációnak?;A) rugalmasság;B) nagyobb biztonság;C) csökkentett karbantartási költségek;D) csökkentett energiaköltségek
+26. Melyik NEM virtualizáció?;A) storage-virtualizáció;B) alkamazás-virtualizáció;D) szerver-virtualizáció;D) hálózati-virtualizáció
+27. Melyik tárolófajta?;A) PAT;B) ARP;C) NAT;D) NAS
+28. Melyik terület NEM tartozik a logisztika alá?;A) elosztás;B) beszerzés;C) yyy;D) termelés
+29. Melyik NEM egy Business Intelligence egyik fajtája;A) transcribe analytics;B) descriptive analytics;C) predictiv analytics;D) prescriptive analytics
+30. Hogyan jelöli a terminál, hogy globális konfigurációs módban vagyunk?;A) -;B) #;C) >;D) o
