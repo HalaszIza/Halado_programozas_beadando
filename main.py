@@ -1,6 +1,8 @@
 import random
 import tkinter as tk
+import customtkinter as ctk
 from tkinter import messagebox
+
 
 #Eső négy kérdés
 with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
