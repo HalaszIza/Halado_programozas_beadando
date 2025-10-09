@@ -17,6 +17,7 @@ with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
     valasz_B_01 = []
     valasz_C_01 = []
     valasz_D_01 = []
+    megoldas_1 = []
 
     for sor_1 in file_1:
         sor_1 = sor_1.strip().split(";")
@@ -25,10 +26,12 @@ with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
         valasz_B_01.append(sor_1[2])
         valasz_C_01.append(sor_1[3])
         valasz_D_01.append(sor_1[4])
+        megoldas_1.append(sor_1[5])
 
 # Tesztelés:            
 #print(f"{kerdes_01[0]}")
 #print(f"{valasz_A_01[0]} {valasz_B_01[0]} {valasz_C_01[0]} {valasz_D_01[0]}")
+#print(f"{megoldas_1[0]}")
 
 #Második két kérdés
 
@@ -42,6 +45,7 @@ with open("kerdesek_valaszok_03.txt", "r", encoding="utf-8") as file_3:
     valasz_B_03 = []
     valasz_C_03 = []
     valasz_D_03 = []
+    megoldas_3 = []
 
     for sor_3 in file_3:
         sor_3 = sor_3.strip().split(";")
@@ -50,11 +54,14 @@ with open("kerdesek_valaszok_03.txt", "r", encoding="utf-8") as file_3:
         valasz_B_03.append(sor_3[2])
         valasz_C_03.append(sor_3[3])
         valasz_D_03.append(sor_3[4])
+        megoldas_3.append(sor_3[5])
 
 # Tesztelés:            
 #print(f"{kerdes_01[0]}")
 #print(f"{kerdes_03[0]}")
 #print(f"{valasz_A_03[0]} {valasz_B_03[0]} {valasz_C_03[0]} {valasz_D_03[0]}")
+#print(f"{megoldas_3[0]}")
+
 
 def nyit_uj_ablak():
     foablak.withdraw()
