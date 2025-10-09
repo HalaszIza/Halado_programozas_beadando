@@ -1,7 +1,12 @@
 import random
 import tkinter as tk
-import customtkinter as ctk
+import customtkinter as ctk #Designhoz
 from tkinter import messagebox
+from customtkinter import * #Designhoz
+from PIL import Image #Designhoz
+
+#Design elemek
+set_appearance_mode("dark")
 
 
 #Eső négy kérdés
@@ -54,28 +59,29 @@ with open("kerdesek_valaszok_03.txt", "r", encoding="utf-8") as file_3:
 def nyit_uj_ablak():
     foablak.withdraw()
 
-    uj_ablak = tk.Toplevel()
+    uj_ablak = CTkToplevel()
     uj_ablak.title("Játék!")
     uj_ablak.geometry("600x500")
 
     for i in range(1):
         kerdes_1_4 = random.choice(kerdes_01)
-        lbl = tk.Label(uj_ablak, text=kerdes_1_4, font=("Arial", 12))
+        lbl = CTkLabel(uj_ablak, text=kerdes_1_4, font=("Arial", 12))
         lbl.pack(pady=20)
 
-    bezar = tk.Button(uj_ablak, text="Bezárás", command=uj_ablak.destroy)
+    bezar = CTkButton(uj_ablak, text="Bezárás", command=uj_ablak.destroy)
     bezar.pack()
+    bezar.place(relx=0.38, rely=0.7)
 
-    A_btn = tk.Button(uj_ablak, text="A válasz", command=lambda: visszahozo(foablak, uj_ablak))
+    A_btn = CTkButton(uj_ablak, text="A válasz", command=lambda: visszahozo(foablak, uj_ablak))
     A_btn.pack()
 
-    B_btn = tk.Button(uj_ablak, text="B válasz", command=lambda: visszahozo(foablak, uj_ablak))
+    B_btn = CTkButton(uj_ablak, text="B válasz", command=lambda: visszahozo(foablak, uj_ablak))
     B_btn.pack()
 
-    C_btn = tk.Button(uj_ablak, text="C válasz", command=lambda: visszahozo(foablak, uj_ablak))
+    C_btn = CTkButton(uj_ablak, text="C válasz", command=lambda: visszahozo(foablak, uj_ablak))
     C_btn.pack()
 
-    D_btn = tk.Button(uj_ablak, text="D válasz", command=lambda: visszahozo(foablak, uj_ablak))
+    D_btn = CTkButton(uj_ablak, text="D válasz", command=lambda: visszahozo(foablak, uj_ablak))
     D_btn.pack()
 
 def visszahozo(foablak, uj_ablak):
@@ -83,16 +89,17 @@ def visszahozo(foablak, uj_ablak):
     foablak.deiconify()
 
 # Főablak
-foablak = tk.Tk()
+foablak = ctk.CTk()
 foablak.title("Legyen Ön is mérnökinfós! :)")
 foablak.geometry("800x600")
 
-lbl = tk.Label(foablak, text="Legyen Ön is mérnökinfós kvízjáték.\nFeladat 7 helyes válasz megadás.\nKezdődhet a játék?")
+lbl = CTkLabel(foablak, text="Legyen Ön is mérnökinfós kvízjáték.\nFeladat 7 helyes válasz megadás.\nKezdődhet a játék?")
 lbl.pack(padx=20, pady=20)
 
 # Gomb
-gomb_1 = tk.Button(foablak, text="Kezdjünk hozzá!", command=nyit_uj_ablak)
+gomb_1 = CTkButton(foablak, text="Kezdjünk hozzá!", command=nyit_uj_ablak)
 gomb_1.pack(pady=50)
 
 # Futtatás
 foablak.mainloop()
+
