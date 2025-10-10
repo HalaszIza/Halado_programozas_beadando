@@ -55,37 +55,21 @@ with open("kerdesek_valaszok_03.txt", "r", encoding="utf-8") as file_3:
 #print(f"{megoldas_3[0]}")
 
 
-def nyit_uj_ablak():
+def kerdesek_ablak():
     foablak.withdraw()
 
     uj_ablak = CTkToplevel()
     uj_ablak.title("Játék!")
     uj_ablak.geometry("600x500")
 
-    for i in range(1):
-        kerdes_1_4 = random.choice(kerdes_01)
-        lbl = CTkLabel(uj_ablak, text=kerdes_1_4, font=("Arial", 12))
-        lbl.pack(pady=20)
+    kerdes_1_4 = random.randint(0, len(kerdes_01) - 1 ) 
 
-    bezar = CTkButton(uj_ablak, text="Bezárás", command=uj_ablak.destroy)
-    bezar.pack()
-    bezar.place(relx=0.38, rely=0.7)
+    krd_lbl = tk.Label(uj_ablak, text=kerdes_01[kerdes_1_4], font=("Arial", 12))
+    krd_lbl.pack(padx=20, pady=20)
 
-    A_btn = CTkButton(uj_ablak, text="A válasz", command=lambda: visszahozo(foablak, uj_ablak))
-    A_btn.pack()
-
-    B_btn = CTkButton(uj_ablak, text="B válasz", command=lambda: visszahozo(foablak, uj_ablak))
-    B_btn.pack()
-
-    C_btn = CTkButton(uj_ablak, text="C válasz", command=lambda: visszahozo(foablak, uj_ablak))
-    C_btn.pack()
-
-    D_btn = CTkButton(uj_ablak, text="D válasz", command=lambda: visszahozo(foablak, uj_ablak))
-    D_btn.pack()
-
-def visszahozo(foablak, uj_ablak):
-    uj_ablak.destroy()  
-    foablak.deiconify()
+    for i in range(4):
+        vlsz_btn = tk.Button(uj_ablak, text=betuk[i] + valaszok_01[kerdes_1_4][i])
+        vlsz_btn.pack()
 
 # Főablak
 foablak = ctk.CTk()
@@ -96,7 +80,7 @@ lbl = CTkLabel(foablak, text="Legyen Ön is mérnökinfós kvízjáték.\nFelada
 lbl.pack(padx=20, pady=20)
 
 # Gomb
-gomb_1 = CTkButton(foablak, text="Kezdjünk hozzá!", command=nyit_uj_ablak)
+gomb_1 = CTkButton(foablak, text="Kezdjünk hozzá!", command=kerdesek_ablak)
 gomb_1.pack(pady=50)
 
 # Futtatás
