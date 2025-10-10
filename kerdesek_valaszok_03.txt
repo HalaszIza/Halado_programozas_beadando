@@ -1,10 +1,10 @@
-31. Mi az a PLC?;A) Programozható logikai kapcsoló;B) Programozható logikai vezérlő;C) Parancsvezérelt lineáris ciklus;D) Passzív logikai csatorna;B)
-32. Melyik szenzor típus mér távolságot ultrahanggal?;A) Hőmérő;B) Fotóellenállás;C) Ultrahangos szenzor;D) Nyomásérzékelő;C)
-33. Mi az IoT egyik fő jellemzője ipari környezetben?;A) Hálózati nyomtatás;B) Valós idejű adatgyűjtés és vezérlés;C) Webes tárhely biztosítása;D) Kézi adatrögzítés;B)
-34. Mi a robot munkaterének (work envelope) jelentése?;A) A robot működési ideje;B) A robot karhossza;C) A robot által elérhető teljes térfogat;D) A programozás hossza;C)
-35. Melyik robotalkatrész biztosítja az erőátvitelt?;A) Szenzor;B) Meghajtómotor;C) Vezérlőpanel;D) Tápegység;B)
-36. Mit jelent az "offline programozás" robotok esetén?;A) Csak tantermi szimuláció;B) A robot programjának elkészítése a számítógépen, nem élőben;C) Hibás programok javítása;D) Internet nélküli működés;B)
-37. Mi az egyik fő jellemzője a kollaboratív robotnak?;A) Biztonságosan együttműködik emberekkel;B) Nincs szükség hálózatra;C) Csak zárt térben működhet;D) Emberi irányítás nélkül dolgozik;A)
-38. Milyen érzékelőt használnak gyakran cobotok az ütközés elkerülésére?;A) GPS;B) Hőérzékelő;C) Lézergravírozó;D) Erő-nyomaték szenzor;D)
-39. Mit jelent az automatizálás?;A) Gépek és rendszerek használata emberi beavatkozás csökkentésére;B) Emberek teljes kizárását minden folyamatból;C) Manuális vezérlés gyorsítása;D) Gépek újraindítása automatikusan;A)
-40. Melyik szabályozási típus használ visszacsatolást?;A) Kézi vezérlés;B) Áramkör lezárás;C) Időzített kapcsolás;D) PID szabályozás;D)
+31. Mi az a PLC?; Programozható-logikai-kapcsoló Programozható-logikai-vezérlő Parancsvezérelt-lineáris-ciklus Passzív-logikai-csatorna; Programozható-logikai-vezérlő
+32. Melyik szenzor típus mér távolságot ultrahanggal?; Hőmérő Fotóellenállás Ultrahangos-szenzor Nyomásérzékelő; Ultrahangos-szenzor
+33. Mi az IoT egyik fő jellemzője ipari környezetben?; Hálózati-nyomtatás Valós-idejű-adatgyűjtés-és-vezérlés Webes-tárhely-biztosítása Kézi-adatrögzítés; Valós-idejű-adatgyűjtés-és-vezérlés
+34. Mi a robot munkaterének (work envelope) jelentése?; A-robot-működési-ideje A-robot-karhossza A-robot-által-elérhető-teljes-térfogat A-programozás-hossza; A-robot-által-elérhető-teljes-térfogat
+35. Melyik robotalkatrész biztosítja az erőátvitelt?; Szenzor Meghajtómotor Vezérlőpanel Tápegység; Meghajtómotor
+36. Mit jelent az "offline programozás" robotok esetén?; Csak-tantermi-szimuláció A-robot-programjának-elkészítése-a-számítógépen,-nem-élőben Hibás-programok-javítása Internet-nélküli-működés; A-robot-programjának-elkészítése-a-számítógépen,-nem-élőben
+37. Mi az egyik fő jellemzője a kollaboratív robotnak?; Biztonságosan-együttműködik-emberekkel Nincs-szükség-hálózatra; Csak-zárt-térben-működhet Emberi-irányítás-nélkül-dolgozik; Biztonságosan-együttműködik-emberekkel
+38. Milyen érzékelőt használnak gyakran cobotok az ütközés elkerülésére?; GPS Hőérzékelő Lézergravírozó Erő-nyomaték-szenzor; Erő-nyomaték-szenzor
+39. Mit jelent az automatizálás?; Gépek-és-rendszerek-használata-emberi-beavatkozás-csökkentésére Emberek-teljes-kizárását-minden-folyamatból Manuális-vezérlés-gyorsítása Gépek-újraindítása-automatikusan; Gépek-és-rendszerek-használata-emberi-beavatkozás-csökkentésére
+40. Melyik szabályozási típus használ visszacsatolást?; Kézi-vezérlés Áramkör-lezárás Időzített-kapcsolás PID-szabályozás; PID-szabályozás

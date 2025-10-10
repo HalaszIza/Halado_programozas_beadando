@@ -1,10 +1,10 @@
-21. Hány biten tárolódik az IPv4-es cím?;A) 64;B) 16;C) 32;D) 128;C)
-22. Hány biten tárolódik az IPv6-os cím?;A) 128;B) 32;C) 16;D) 64;A)
-23. Hogyan néz ki az APIPA cím?;A) 192.168.x.x;B) 255.255.x.x;C) 169.254.x.x;D) 168.254.x.x;C)
-24. Melyik a középső szintje a felhőszolgáltatásoknak?;A) Infrastracture as a Service;B) Software as a Service;C) Private Cloud;D) Platform as a Servivce;D)
-25. Melyik NEM előnye a virtuakizációnak?;A) rugalmasság;B) nagyobb biztonság;C) csökkentett karbantartási költségek;D) csökkentett energiaköltségek;B)
-26. Melyik NEM virtualizáció?;A) storage-virtualizáció;B) alkamazás-virtualizáció;D) szerver-virtualizáció;D) hálózati-virtualizáció;D)
-27. Melyik tárolófajta?;A) PAT;B) ARP;C) NAT;D) NAS;D)
-28. Melyik terület NEM tartozik a logisztika alá?;A) elosztás;B) beszerzés;C) yyy;D) termelés;C)
-29. Melyik NEM egy Business Intelligence egyik fajtája;A) transcribe analytics;B) descriptive analytics;C) predictiv analytics;D) prescriptive analytics;A)
-30. Hogyan jelöli a terminál, hogy globális konfigurációs módban vagyunk?;A) -;B) #;C) >;D) o;B)
+21. Hány biten tárolódik az IPv4-es cím?; 64 16 32 128; 32
+22. Hány biten tárolódik az IPv6-os cím?; 128 32 16 64; 128
+23. Hogyan néz ki az APIPA cím?; 192.168.x.x 255.255.x.x 169.254.x.x 168.254.x.x; 169.254.x.x
+24. Melyik a középső szintje a felhőszolgáltatásoknak?; Infrastracture-as-a-Service Software-as-a-Service Private-Cloud Platform-as-a-Servivce; Platform-as-a-Servivce
+25. Melyik NEM előnye a virtuakizációnak?; rugalmasság nagyobb-biztonság csökkentett-karbantartási-költségek csökkentett-energiaköltségek; nagyobb-biztonság
+26. Melyik NEM virtualizáció?; storage-virtualizáció alkamazás-virtualizáció szerver-virtualizáció hálózati-virtualizáció; hálózati-virtualizáció
+27. Melyik tárolófajta?; PAT ARP NAT NAS; NAS
+28. Melyik terület NEM tartozik a logisztika alá?; elosztás beszerzés yyy termelés; yyy
+29. Melyik NEM egy Business Intelligence egyik fajtája; transcribe-analytics descriptive-analytics predictiv-analytics prescriptive-analytics; transcribe-analytics
+30. Hogyan jelöli a terminál, hogy globális konfigurációs módban vagyunk?; - # > o; #
