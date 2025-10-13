@@ -1,20 +1,20 @@
-1. Melyik országban született Neumann János?; Németország Magyarország Ausztria Svájc; Magyarország
-2. Milyen területen nem végzett kiemelkedő munkát Neumann János?; Matematika Kémia Számítástechnika Fizika; Kémia
-3. Melyik évben született Neumann János?; 1903 1898 1910 1921; 1903
-4. Melyik elv fűződik a nevéhez a számítógépek működésében?; Turing-gép Neumann-elv Moore-törvény Pascal-elv; Neumann-elv
-5. Melyik híres amerikai projektben vett részt?; Apollo-program Manhattan-terv NASA-Voyager DARPA-net; Manhattan-terv
-6. Melyik egyetemen tanult Neumann János?; Cambridge; Műegyetem-(BME) ETH-Zürich ETH-Zürich-és-Berlin; ETH-Zürich-és-Berlin
-7. Mit fejlesztett ki az ENIAC számítógép kapcsán?; Operációs rendszert; Mechanikus-alkatrészeket Tárolt-program-elvét Internetkapcsolatot; Tárolt-program-elvét
-8. Mi volt Neumann János egyik fő hozzájárulása a játékelmélethez?; Véletlenszám-generálás Nash-egyensúly Két-személy-nullösszegű-játékok-elmélete Monte-Carlo-szimuláció; Két-személy-nullösszegű-játékok-elmélete
-9. Melyik tudományos társaság tagja volt?;Royal-Society NASA Magyar-Tudományos-Akadémia National-Academy-of-Sciences-(USA); National-Academy-of-Sciences-(USA)
-10. Hol halt meg Neumann János?; Budapest; Bécs; Washington; Washington-D.C.; Washington-D.C.
-11. Mi volt Neumann János születési neve?; Neumann-Johann Neumann-János-László Neumann-György Neumann-László; Neumann-János-László
-12. Melyik gép fejlesztésében vett részt közvetetten, az elveivel?; UNIVAC Colossus Z3 Commodore-64; UNIVAC
-13. Milyen tudományos módszert alkalmazott a hidrogénbomba fejlesztésében?; Numerikus-integráció Monte-Carlo-szimuláció Neurális-hálózat Fourier-transzformáció; Monte-Carlo-szimuláció
-14. Melyik nem Neumannhoz köthető?; Játékelmélet Kvantummechanika Internet-fejlesztése Tárolt-program-elve; Internet-fejlesztése
-15. Melyik amerikai intézetnél dolgozott sokáig?; NASA; MIT; Princeton-Institute-for-Advanced-Study; Harvard; Princeton-Institute-for-Advanced-Study
-16. Mit jelent a „Neumann-architektúra” egyik fő elve?; A-számítógép-képes-hangfelismerésre A-programutasítások-és-az-adatok-külön-memóriában-tárolódnak A-program-és-az-adatok-ugyanabban-a-memóriában-tárolódnak A-számítógép-egyszerre-több-programot-futtat-minden-magon; A-program-és-az-adatok-ugyanabban-a-memóriában-tárolódnak
-17. Melyik csoportba tartozott Neumann János?; Magyar-matematikai-kör A-„marslakók”-(magyar-tudósok-Amerikában) Bolyai-Társaság Modernista-fizikusok; A-„marslakók”-(magyar-tudósok-Amerikában)
-18. Melyik katonai szervezet tanácsadója volt?; CIA FBI Pentagon NATO; Pentagon
-19. Milyen tudományágat segített megalapozni a számítógépek mellett?; Biológia Kémiai-számítások Játékelmélet Nyelvészet; Játékelmélet
-20. Milyen betegségben hunyt el Neumann János?; Leukémia Agydaganat Szívroham Tüdőrák; Agydaganat
+1. Melyik országban született Neumann János?; Németország Magyarország Ausztria Svájc;Magyarország
+2. Milyen területen nem végzett kiemelkedő munkát Neumann János?; Matematika Kémia Számítástechnika Fizika;Kémia
+3. Melyik évben született Neumann János?; 1903 1898 1910 1921;1903
+4. Melyik elv fűződik a nevéhez a számítógépek működésében?; Turing-gép Neumann-elv Moore-törvény Pascal-elv;Neumann-elv
+5. Melyik híres amerikai projektben vett részt?; Apollo-program Manhattan-terv NASA-Voyager DARPA-net;Manhattan-terv
+6. Melyik egyetemen tanult Neumann János?; Cambridge; Műegyetem-(BME) ETH-Zürich ETH-Zürich-és-Berlin;ETH-Zürich-és-Berlin
+7. Mit fejlesztett ki az ENIAC számítógép kapcsán?; Operációs rendszert; Mechanikus-alkatrészeket Tárolt-program-elvét Internetkapcsolatot;Tárolt-program-elvét
+8. Mi volt Neumann János egyik fő hozzájárulása a játékelmélethez?; Véletlenszám-generálás Nash-egyensúly Két-személy-nullösszegű-játékok-elmélete Monte-Carlo-szimuláció;Két-személy-nullösszegű-játékok-elmélete
+9. Melyik tudományos társaság tagja volt?;Royal-Society NASA Magyar-Tudományos-Akadémia National-Academy-of-Sciences-(USA);National-Academy-of-Sciences-(USA)
+10. Hol halt meg Neumann János?; Budapest; Bécs; Washington; Washington-D.C.;Washington-D.C.
+11. Mi volt Neumann János születési neve?; Neumann-Johann Neumann-János-László Neumann-György Neumann-László;Neumann-János-László
+12. Melyik gép fejlesztésében vett részt közvetetten, az elveivel?; UNIVAC Colossus Z3 Commodore-64;UNIVAC
+13. Milyen tudományos módszert alkalmazott a hidrogénbomba fejlesztésében?; Numerikus-integráció Monte-Carlo-szimuláció Neurális-hálózat Fourier-transzformáció;Monte-Carlo-szimuláció
+14. Melyik nem Neumannhoz köthető?; Játékelmélet Kvantummechanika Internet-fejlesztése Tárolt-program-elve;Internet-fejlesztése
+15. Melyik amerikai intézetnél dolgozott sokáig?; NASA; MIT; Princeton-Institute-for-Advanced-Study; Harvard;Princeton-Institute-for-Advanced-Study
+16. Mit jelent a „Neumann-architektúra” egyik fő elve?; A-számítógép-képes-hangfelismerésre A-programutasítások-és-az-adatok-külön-memóriában-tárolódnak A-program-és-az-adatok-ugyanabban-a-memóriában-tárolódnak A-számítógép-egyszerre-több-programot-futtat-minden-magon;A-program-és-az-adatok-ugyanabban-a-memóriában-tárolódnak
+17. Melyik csoportba tartozott Neumann János?; Magyar-matematikai-kör A-„marslakók”-(magyar-tudósok-Amerikában) Bolyai-Társaság Modernista-fizikusok;A-„marslakók”-(magyar-tudósok-Amerikában)
+18. Melyik katonai szervezet tanácsadója volt?; CIA FBI Pentagon NATO;Pentagon
+19. Milyen tudományágat segített megalapozni a számítógépek mellett?; Biológia Kémiai-számítások Játékelmélet Nyelvészet;Játékelmélet
+20. Milyen betegségben hunyt el Neumann János?; Leukémia Agydaganat Szívroham Tüdőrák;Agydaganat
