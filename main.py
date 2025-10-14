@@ -10,8 +10,8 @@ from PIL import Image #Designhoz
 #set_appearance_mode("dark")
 
 betuk = ['A)', 'B)', 'C)', 'D)']
-kerdesek_14 = 0
-kerdes_1_4 = 0
+kerdesek_13 = 0
+kerdes_1_3 = 0
 
 #Eső négy kérdés
 with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
@@ -69,7 +69,8 @@ eredmeny = ctk.CTkLabel(foablak, text="", font=("Arial", 12))
 eredmeny.pack(pady=10)
 
 def kerdesek_ablak():
-    global kerdes_1_4, kerdesek_14
+    global kerdes_1_3
+    global kerdesek_13
     foablak.withdraw()
 
     uj_ablak = ctk.CTkToplevel()
@@ -79,20 +80,29 @@ def kerdesek_ablak():
     helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12))
     helyes_e_lbl.pack(pady=10)
 
-    kov_btn = ctk.CTkButton(uj_ablak, text="Következő kérdés", command=lambda: kov_kerdes(uj_ablak), state="disabled")
+    kov_btn = ctk.CTkButton(uj_ablak, text="Következő kérdés", command=lambda: kov_kerdes(), state="disabled")
     kov_btn.pack(pady=10)
 
-    def kerdes_14_mt():
-        global kerdes_1_4, vlsz_btn, gombok
+    def kerdes_13_mt():
+        global kerdes_1_3
+        global vlsz_btn
+        global gombok
+        global krd_lbl
 
-        kerdes_1_4 = random.randint(0, len(kerdes_01) - 1 )
-        krd = kerdes_01[kerdes_1_4]
+        if 'krd_lbl' in globals():
+            krd_lbl.destroy()
+        if 'gombok' in globals():
+            for btn in gombok:
+                btn.destroy()
+
+        kerdes_1_3 = random.randint(0, len(kerdes_01) - 1 )
+        krd = kerdes_01[kerdes_1_3]
         krd_lbl = ctk.CTkLabel(uj_ablak, text=krd, font=("Arial", 12))
         krd_lbl.pack(padx=20, pady=20)
 
         gombok = []
         for i in range(4):
-            btn_sz = valaszok_01[kerdes_1_4][i]
+            btn_sz = valaszok_01[kerdes_1_3][i]
             vlsz_btn = ctk.CTkButton(uj_ablak, text=betuk[i] + btn_sz, 
                                  command=lambda txt=btn_sz: (krd_ell(txt, kov_btn), gomb_sz(vlsz_btn.cget("text"))))
             gombok.append(vlsz_btn)
@@ -105,7 +115,7 @@ def kerdesek_ablak():
         helyes_e_lbl.configure(text="")
 
     def krd_ell(vlsz_btn_sz, kovetkezo_gomb):
-        helyes_idx = megoldas_1[kerdes_1_4]
+        helyes_idx = megoldas_1[kerdes_1_3]
 
         if vlsz_btn_sz == helyes_idx:
             helyes_e_lbl.configure(text="Helyes!")
@@ -115,10 +125,10 @@ def kerdesek_ablak():
             show_msgbox()
 
     def kov_kerdes():
-        global kerdesek_14
-        kerdesek_14 += 1
-        if kerdesek_14 < 4:
-            kerdes_14_mt()
+        global kerdesek_13
+        kerdesek_13 += 1
+        if kerdesek_13 < 3:
+            kerdes_13_mt()
         else:
             pass
 
@@ -132,7 +142,7 @@ def kerdesek_ablak():
         ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy())).pack(side=ctk.LEFT, padx=20)
         ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=ctk.RIGHT, padx=20)
 
-    kerdes_14_mt()
+    kerdes_13_mt()
 
 
 start_btn = ctk.CTkButton(foablak, text="Kezdjünk hozzá!", command=kerdesek_ablak)
