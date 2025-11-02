@@ -5,6 +5,7 @@ import customtkinter as ctk #Designhoz
 from tkinter import messagebox
 #from customtkinter import * #Designhoz
 from PIL import Image, ImageTk #Designhoz
+from customtkinter import CTkImage
 
 #Design elemek
 #set_appearance_mode("dark")
@@ -66,13 +67,11 @@ foablak = ctk.CTk()
 foablak.title("Legyen Ön is mérnökinfós!")
 foablak.geometry("800x600")
 
-background_image = Image.open("Images/nje_logo.png")
-image = background_image.resize((800, 600), Image.Resampling.LANCZOS)
-bg_image = ImageTk.PhotoImage(image)
+pil_image = Image.open("Images/nje_logo.png")
+bg_image = CTkImage(light_image=pil_image, size=(800, 600))
 
-
-lbl = ctk.CTkLabel(foablak, text="Legyen Ön is mérnökinfós kvízjáték!\nFeladat 7 helyes válasz megadása.\nAz első 3 kérdés Neumann Jánosról fog szólni.\nAz utána következő négy pedig a Hálózatbiztonsági és üzemeltetési-és Ipari informatika specializációról fog szólni.\n\
-                   😜Kezdődhet a játék?😜", font=("Apostol", 18), image=bg_image)
+lbl = ctk.CTkLabel(foablak, text="Legyen Ön is mérnökinfós kvízjáték!\n\nFeladat 7 helyes válasz megadása.\nAz első 3 kérdés Neumann Jánosról fog szólni.\nAz utána következő négy pedig a Hálózatbiztonsági és üzemeltetési-és\n Ipari informatika specializációról fog szólni.\n\
+                   \n😜Kezdődhet a játék?😜", font=("Apostol", 18), image=bg_image)
 lbl.pack(padx=20, pady=20)
 lbl.place(relx=0, rely=0, relwidth=1, relheight=1)
 lbl.lower()
@@ -88,10 +87,13 @@ def kerdesek13_ablak():
 
     uj_ablak = ctk.CTkToplevel()
     uj_ablak.title("Játék!")
-    uj_ablak.geometry("600x500")
+    uj_ablak.geometry("800x600")
 
-    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12))
+    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12), image=bg_image)
     helyes_e_lbl.pack(pady=10)
+    helyes_e_lbl.place(relx=0, rely=0, relwidth=1, relheight=1)
+    helyes_e_lbl.lower()
+
 
     kov_btn = ctk.CTkButton(uj_ablak, text="Következő kérdés", command=lambda: kov_kerdes(), state="disabled")
     kov_btn.pack(pady=10)
@@ -274,7 +276,7 @@ def kerdesek67_ablak():
 
 start_btn = ctk.CTkButton(foablak, text="Kezdjünk hozzá!", command=kerdesek13_ablak)
 start_btn.pack(pady=50)
-start_btn.place(relx=0.45, rely=0.7)
+start_btn.place(relx=0.5, rely=0.7, anchor="center")
 
 foablak.mainloop()
 
