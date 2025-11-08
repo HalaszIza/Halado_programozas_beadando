@@ -1,10 +1,10 @@
-21. Hány biten tárolódik az IPv4-es cím?; 64 16 32 128;32
-22. Hány biten tárolódik az IPv6-os cím?; 128 32 16 64;128
-23. Hogyan néz ki az APIPA cím?; 192.168.x.x 255.255.x.x 169.254.x.x 168.254.x.x;169.254.x.x
-24. Melyik a középső szintje a felhőszolgáltatásoknak?; Infrastracture-as-a-Service Software-as-a-Service Private-Cloud Platform-as-a-Servivce;Platform-as-a-Servivce
-25. Melyik NEM előnye a virtuakizációnak?; rugalmasság nagyobb-biztonság csökkentett-karbantartási-költségek csökkentett-energiaköltségek;nagyobb-biztonság
-26. Melyik NEM virtualizáció?; storage-virtualizáció alkamazás-virtualizáció szerver-virtualizáció hálózati-virtualizáció;hálózati-virtualizáció
-27. Melyik tárolófajta?; PAT ARP NAT NAS;NAS
-28. Melyik terület NEM tartozik a logisztika alá?; elosztás beszerzés yyy termelés;yyy
-29. Melyik NEM egy Business Intelligence egyik fajtája; transcribe-analytics descriptive-analytics predictiv-analytics prescriptive-analytics;transcribe-analytics
-30. Hogyan jelöli a terminál, hogy globális konfigurációs módban vagyunk?; - # > o;#
+21. Hány biten tárolódik az IPv4-es cím?;64 16 32 128;32
+22. Hány biten tárolódik az IPv6-os cím?;128 32 16 64;128
+23. Hogyan néz ki az APIPA cím?;192.168.x.x 255.255.x.x 169.254.x.x 168.254.x.x;169.254.x.x
+24. Melyik a középső szintje a felhőszolgáltatásoknak?;Infrastracture_as_a_Service Software_as_a-Service Private_Cloud Platform_as_a_Servivce;Platform_as_a_Servivce
+25. Melyik NEM előnye a virtuakizációnak?;rugalmasság nagyobb_biztonság csökkentett_karbantartási_költségek csökkentett_energiaköltségek;nagyobb_biztonság
+26. Melyik NEM virtualizáció?;storage_virtualizáció alkamazás_virtualizáció szerver_virtualizáció hálózati_virtualizáció;hálózati_virtualizáció
+27. Melyik tárolófajta?;PAT ARP NAT NAS;NAS
+28. Melyik terület NEM tartozik a logisztika alá?;elosztás beszerzés yyy termelés;yyy
+29. Melyik NEM egy Business Intelligence egyik fajtája;transcribe_analytics descriptive_analytics predictiv_analytics prescriptive_analytics;transcribe_analytics
+30. Hogyan jelöli a terminál, hogy globális konfigurációs módban vagyunk?;- # > o;#
