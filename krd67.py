@@ -6,15 +6,18 @@ from tkinter import messagebox
 #from customtkinter import * #Designhoz
 from PIL import Image, ImageTk #Designhoz
 from customtkinter import CTkImage
-
+import krd13
 
 #6-7 kérdés
 def kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk):
     global kerdes_6_7
     global kerdesek_67
 
+
     kerdesek_67 = 0
     kerdes_6_7  = 0
+
+
 
     uj_ablak = tk.Toplevel()
     uj_ablak.title("Játék!")
@@ -67,11 +70,13 @@ def kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk):
     def krd_ell(vlsz_btn_sz, kovetkezo_gomb):
         global vlsz_btn
         global gombok
+        global kerdesek_67
         helyes_idx = megoldas_3[kerdes_6_7]
 
         if vlsz_btn_sz == helyes_idx:
             helyes_e_lbl.configure(text="Helyes!")
             kovetkezo_gomb.configure(state="normal")
+            kerdesek_67 += 1
         else:
             helyes_e_lbl.configure(text="Helytelen!")
             show_msgbox()
@@ -82,9 +87,7 @@ def kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk):
 
     def kov_kerdes():
         global kerdesek_67
-        kerdesek_67 += 1
-
-        if kerdesek_67 < 3:
+        if kerdesek_67 < 2:
             kerdes_67_mt()
         else:
             show_exitbox()
@@ -96,7 +99,7 @@ def kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk):
         box.grab_set()
 
         ctk.CTkLabel(box, text="A válasz helytelen, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
-        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy())).pack(side=ctk.LEFT, padx=20)
+        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk))).pack(side=ctk.LEFT, padx=20)
         ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=ctk.RIGHT, padx=20)
 
     def show_exitbox():
@@ -107,7 +110,7 @@ def kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk):
 
         tk.Label(box, text="Minden kérdésre helyesen válaszoltál, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
 
-        tk.Button(box, text="Új játék", command=lambda: (box.destroy())).pack(side=tk.LEFT, padx=20)
+        tk.Button(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy())).pack(side=tk.LEFT, padx=20)
         tk.Button(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=tk.RIGHT, padx=20)
 
     kerdes_67_mt()

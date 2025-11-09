@@ -4,7 +4,7 @@
 4. Melyik elv fűződik a nevéhez a számítógépek működésében?;Turing-gép Neumann-elv Moore-törvény Pascal-elv;Neumann-elv
 5. Melyik híres amerikai projektben vett részt?;Apollo-program Manhattan-terv NASA-Voyager DARPA-net;Manhattan-terv
 6. Melyik egyetemen tanult Neumann János?;Cambridge Műegyetem_(BME) ETH_Zürich ETH_Zürich_és_Berlin;ETH_Zürich_és_Berlin
-7. Mit fejlesztett ki az ENIAC számítógép kapcsán?;Operációs rendszert Mechanikus-alkatrészeket Tárolt-program-elvét Internetkapcsolatot;Tárolt-program-elvét
+7. Mit fejlesztett ki az ENIAC számítógép kapcsán?;Operációs_rendszert Mechanikus_alkatrészeket Tárolt_program_elvét Internetkapcsolatot;Tárolt_program_elvét
 8. Mi volt Neumann János egyik fő hozzájárulása a játékelmélethez?;Véletlenszám_generálás Nash_egyensúly Két_személy_nullösszegű_játékok_elmélete Monte_Carlo_szimuláció;Két_személy_nullösszegű_játékok_elmélete
 9. Melyik tudományos társaság tagja volt?;Royal_Society NASA Magyar_Tudományos_Akadémia National_Academy_of_Sciences_(USA);National_Academy_of_Sciences_(USA)
 10. Hol halt meg Neumann János?;Budapest Bécs Washington Washington_D.C.;Washington_D.C.

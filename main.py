@@ -47,10 +47,8 @@ lbl.pack(padx=20, pady=20)
 lbl.place(relx=0, rely=0, relwidth=1, relheight=1)
 lbl.lower()
 
-
 eredmeny = ctk.CTkLabel(foablak, text="", font=("Arial", 12))
 eredmeny.pack(pady=10)
-
 
 start_btn = ctk.CTkButton(foablak, text="Kezdjünk hozzá!", command=lambda: krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk))
 start_btn.pack(pady=50)

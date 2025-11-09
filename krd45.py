@@ -83,11 +83,13 @@ def kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk):
     def krd_ell(vlsz_btn_sz, kovetkezo_gomb):
         global vlsz_btn
         global gombok
+        global kerdesek_45
         helyes_idx = megoldas_2[kerdes_4_5]
 
         if vlsz_btn_sz == helyes_idx:
             helyes_e_lbl.configure(text="Helyes!")
             kovetkezo_gomb.configure(state="normal")
+            kerdesek_45 += 1
         else:
             helyes_e_lbl.configure(text="Helytelen!")
             show_msgbox()
@@ -98,22 +100,33 @@ def kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk):
 
     def kov_kerdes():
         global kerdesek_45
-        kerdesek_45 += 1
-
-        if kerdesek_45 < 3:
+        if kerdesek_45 < 2:
             kerdes_45_mt()
         else:
             kov_blokkbox()
 
     def kov_blokkbox():
         uj_ablak.withdraw()
-        box = tk.Toplevel(foablak)
-        box.title("3/3, nem semmi.")
-        box.geometry("500x300")
-        box.grab_set()
 
-        tk.Label(box, text="Eddig 3/7, csak így tovább. A következő 2 kérdés a há.", font=("Arial", 12)).pack(pady=20)
-        tk.Button(box, text="Következő kérdések.", command=lambda: (box.destroy(), krd67.kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk))).pack(side=tk.RIGHT,padx=20)
+        if kerdesek_45 == 0:
+            box = tk.Toplevel(foablak)
+            box.title("Vége a játéknak.")
+            box.geometry("500x300")
+            box.grab_set()
+
+            ctk.CTkLabel(box, text="Egyik kérdésre sem tudált helyesen válaszolni, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
+            ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk))).pack(side=ctk.LEFT, padx=20)
+            ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=ctk.RIGHT, padx=20)
+
+        else:
+            box = tk.Toplevel(foablak)
+            box.geometry("500x300")
+            box.grab_set()
+
+            if kerdesek_45 == 2:
+                box.title("2/2, nem semmi.")
+                tk.Label(box, text="Eddig 5/7, csak így tovább. A következő 2 kérdés az Ipari informatika specializációval kapcsolatos. Sok sikert!", font=("Arial", 12)).pack(pady=20)
+                tk.Button(box, text="Következő kérdések.", command=lambda: (box.destroy(), krd67.kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk))).pack(side=tk.RIGHT,padx=20)
 
     def show_msgbox():
         box = ctk.CTkToplevel(uj_ablak)
@@ -122,7 +135,7 @@ def kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk):
         box.grab_set()
 
         ctk.CTkLabel(box, text="A válasz helytelen, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
-        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy())).pack(side=ctk.LEFT, padx=20)
+        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk))).pack(side=ctk.LEFT, padx=20)
         ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=ctk.RIGHT, padx=20)
 
     
