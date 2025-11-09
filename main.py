@@ -7,17 +7,11 @@ from tkinter import messagebox
 from PIL import Image, ImageTk #Designhoz
 from customtkinter import CTkImage
 import krd13
-import krd45
-import krd67
 
 #Design elemek
 #set_appearance_mode("dark")
 
 betuk = ['A)', 'B)', 'C)', 'D)']
-
-kerdesek_45 = 0
-kerdes_4_5 = 0
-
 
 #Eső három kérdés
 with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
@@ -38,30 +32,6 @@ with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
 #for i in range(4):
 #    print(f"{betuk[i]}{valaszok_01[0][i]}")
 #print(f"{megoldas_1[0]}")
-
-#Második két kérdés
-
-
-
-# Harmadik két kérdés
-with open("kerdesek_valaszok_03.txt", "r", encoding="utf-8") as file_3:
-    
-    kerdes_03 = []
-    valaszok_03 = []
-    megoldas_3 = []
-
-    for sor_3 in file_3:
-        sor_3 = sor_3.strip().split(";")
-        if len(sor_3) == 3:
-            kerdes_03.append(sor_3[0])
-            valaszok_03.append(sor_3[1].split())
-            megoldas_3.append(sor_3[2])
-
-# Tesztelés:            
-#print(f"{kerdes_03[0]}")
-#for i in range(4):
-#    print(f"{betuk[i]}{valaszok_03[0][i]}")
-#print(f"{megoldas_3[0]}")
 
 # Főablak
 foablak = ctk.CTk()

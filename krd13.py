@@ -6,9 +6,27 @@ from tkinter import messagebox
 #from customtkinter import * #Designhoz
 from PIL import Image, ImageTk #Designhoz
 from customtkinter import CTkImage
-import krd67
+import krd45
 
+#Második két kérdés
+with open("kerdesek_valaszok_02.txt", "r", encoding="utf-8") as file_2:
+    
+    kerdes_02 = []
+    valaszok_02 = []
+    megoldas_2 = []
 
+    for sor_2 in file_2:
+        sor_2 = sor_2.strip().split(";")
+        if len(sor_2) == 3:
+            kerdes_02.append(sor_2[0])
+            valaszok_02.append(sor_2[1].split())
+            megoldas_2.append(sor_2[2])
+
+# Tesztelés:            
+#print(f"{kerdes_02[0]}")
+#for i in range(4):
+#    print(f"{betuk[i]}{valaszok_02[0][i]}")
+#print(f"{megoldas_2[0]}")
 
 def kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk):
     global kerdes_1_3
@@ -25,14 +43,14 @@ def kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk):
 
     pil_image = Image.open("Images/nje_logo.png")
     bg_image = CTkImage(light_image=pil_image, size=(800, 600))
-    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12), image=bg_image)
 
+    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12), image=bg_image)
     helyes_e_lbl.pack(pady=10)
     helyes_e_lbl.place(relx=0, rely=0, relwidth=1, relheight=1)
     helyes_e_lbl.lower()
 
 
-    kov_btn = ctk.CTkButton(uj_ablak, text="Következő kérdés", command=lambda: kov_kerdes, state="disabled")
+    kov_btn = ctk.CTkButton(uj_ablak, text="Következő kérdés", command=lambda: kov_kerdes(), state="disabled")
     kov_btn.pack(pady=10)
 
     #1-3 kérdés
@@ -85,6 +103,7 @@ def kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk):
         kov_btn.configure(state="normal")
 
     def kov_kerdes():
+        global kerdesek_13
         kerdesek_13 += 1
         if kerdesek_13 < 3:
             kerdes_13_mt()
@@ -93,7 +112,6 @@ def kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk):
 
 
     def kov_blokkbox():
-        global kerdesek67_ablak
         uj_ablak.withdraw()
         box = tk.Toplevel(foablak)
         box.title("3/3, nem semmi.")
@@ -101,7 +119,7 @@ def kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk):
         box.grab_set()
 
         tk.Label(box, text="Eddig 3/7, csak így tovább. A következő 2 kérdés a há.", font=("Arial", 12)).pack(pady=20)
-        tk.Button(box, text="Következő kérdések.", command=lambda: (box.destroy(), kerdesek67_ablak())).pack(side=tk.RIGHT,padx=20)
+        tk.Button(box, text="Következő kérdések.", command=lambda: (box.destroy(), krd45.kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk))).pack(side=tk.RIGHT,padx=20)
 
     def show_msgbox():
         box = ctk.CTkToplevel(uj_ablak)

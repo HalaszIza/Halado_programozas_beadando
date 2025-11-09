@@ -6,7 +6,7 @@ from tkinter import messagebox
 #from customtkinter import * #Designhoz
 from PIL import Image, ImageTk #Designhoz
 from customtkinter import CTkImage
-#import krd45
+
 
 #6-7 kérdés
 def kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk):
@@ -20,6 +20,10 @@ def kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk):
     uj_ablak.title("Játék!")
     uj_ablak.geometry("600x500")
 
+    pil_image = Image.open("Images/nje_logo.png")
+    bg_image = CTkImage(light_image=pil_image, size=(800, 600))
+
+    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12), image=bg_image)
     helyes_e_lbl = tk.Label(uj_ablak, text="", font=("Arial", 12))
     helyes_e_lbl.pack(pady=10)
 
