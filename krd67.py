@@ -8,16 +8,28 @@ from PIL import Image, ImageTk #Designhoz
 from customtkinter import CTkImage
 import krd13
 
+#Eső három kérdés
+with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
+    
+    kerdes_01 = []
+    valaszok_01 = []
+    megoldas_1 = []
+
+    for sor_1 in file_1:
+        sor_1 = sor_1.strip().split(";")
+        if len(sor_1) == 3:
+            kerdes_01.append(sor_1[0])
+            valaszok_01.append(sor_1[1].split())
+            megoldas_1.append(sor_1[2])
+
+
 #6-7 kérdés
-def kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk):
+def kerdesek67_ablak(foablak, kerdes_03, valaszok_03, megoldas_3, betuk):
     global kerdes_6_7
     global kerdesek_67
 
-
     kerdesek_67 = 0
-    kerdes_6_7  = 0
-
-
+    kerdes_6_7  = 0 
 
     uj_ablak = tk.Toplevel()
     uj_ablak.title("Játék!")
@@ -99,7 +111,7 @@ def kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk):
         box.grab_set()
 
         ctk.CTkLabel(box, text="A válasz helytelen, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
-        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk))).pack(side=ctk.LEFT, padx=20)
+        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk))).pack(side=ctk.LEFT, padx=20)
         ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=ctk.RIGHT, padx=20)
 
     def show_exitbox():
@@ -110,7 +122,7 @@ def kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk):
 
         tk.Label(box, text="Minden kérdésre helyesen válaszoltál, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
 
-        tk.Button(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy())).pack(side=tk.LEFT, padx=20)
+        tk.Button(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk))).pack(side=tk.LEFT, padx=20)
         tk.Button(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=tk.RIGHT, padx=20)
 
     kerdes_67_mt()

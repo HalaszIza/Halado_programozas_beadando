@@ -7,6 +7,21 @@ from tkinter import messagebox
 from PIL import Image, ImageTk #Designhoz
 from customtkinter import CTkImage
 import krd67
+import krd13
+
+#Eső három kérdés
+with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
+    
+    kerdes_01 = []
+    valaszok_01 = []
+    megoldas_1 = []
+
+    for sor_1 in file_1:
+        sor_1 = sor_1.strip().split(";")
+        if len(sor_1) == 3:
+            kerdes_01.append(sor_1[0])
+            valaszok_01.append(sor_1[1].split())
+            megoldas_1.append(sor_1[2])
 
 # Harmadik két kérdés
 with open("kerdesek_valaszok_03.txt", "r", encoding="utf-8") as file_3:
@@ -22,11 +37,6 @@ with open("kerdesek_valaszok_03.txt", "r", encoding="utf-8") as file_3:
             valaszok_03.append(sor_3[1].split())
             megoldas_3.append(sor_3[2])
 
-# Tesztelés:            
-#print(f"{kerdes_03[0]}")
-#for i in range(4):
-#    print(f"{betuk[i]}{valaszok_03[0][i]}")
-#print(f"{megoldas_3[0]}")
 
 #4-5 kérdés
 def kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk):
@@ -126,7 +136,7 @@ def kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk):
             if kerdesek_45 == 2:
                 box.title("2/2, nem semmi.")
                 tk.Label(box, text="Eddig 5/7, csak így tovább. A következő 2 kérdés az Ipari informatika specializációval kapcsolatos. Sok sikert!", font=("Arial", 12)).pack(pady=20)
-                tk.Button(box, text="Következő kérdések.", command=lambda: (box.destroy(), krd67.kerdesek67_ablak(kerdes_03, valaszok_03, megoldas_3, betuk))).pack(side=tk.RIGHT,padx=20)
+                tk.Button(box, text="Következő kérdések", command=lambda: (box.destroy(), krd67.kerdesek67_ablak(foablak, kerdes_03, valaszok_03, megoldas_3, betuk))).pack(side=tk.RIGHT,padx=20)
 
     def show_msgbox():
         box = ctk.CTkToplevel(uj_ablak)
@@ -135,7 +145,7 @@ def kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk):
         box.grab_set()
 
         ctk.CTkLabel(box, text="A válasz helytelen, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
-        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk))).pack(side=ctk.LEFT, padx=20)
+        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk))).pack(side=ctk.LEFT, padx=20)
         ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=ctk.RIGHT, padx=20)
 
     
