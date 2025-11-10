@@ -91,14 +91,18 @@ def kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk):
         global gombok
         global kerdesek_13
         helyes_idx = megoldas_1[kerdes_1_3]
+        correct_answer = next(c for c in gombok if vlsz_btn_sz in c.cget("text"))
+        wrong_answer = next(w for w in gombok if vlsz_btn_sz in w.cget("text"))
 
         if vlsz_btn_sz == helyes_idx:
             helyes_e_lbl.configure(text="Helyes!")
             kovetkezo_gomb.configure(state="normal")
             kerdesek_13 += 1
+            correct_answer.configure(fg_color="green")
         else:
             helyes_e_lbl.configure(text="Helytelen!")
             show_msgbox()
+            wrong_answer.configure(fg_color="red")
 
         for vlsz_btn in gombok:
             vlsz_btn.configure(state="disabled")
