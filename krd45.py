@@ -2,8 +2,7 @@ import random
 import tkinter as tk
 import sys
 import customtkinter as ctk
-from tkinter import messagebox
-from PIL import Image, ImageTk
+from PIL import Image
 from customtkinter import CTkImage
 import krd67
 import krd13
@@ -55,7 +54,6 @@ def kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk):
     bg_label = ctk.CTkLabel(uj_ablak, text="", image=bg_image)
     bg_label.place(x=0, y=0, relwidth=1, relheight=1)
     bg_label.lower()
-
 
     helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Apostol", 12))
     helyes_e_lbl.pack(pady=10)
@@ -158,6 +156,5 @@ def kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk):
         ctk.CTkLabel(box, text="A válasz helytelen, a játéknak vége 😥", font=("Apostol", 14)).pack(pady=20)
         ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk))).pack(side=ctk.LEFT, padx=20)
         ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=ctk.RIGHT, padx=20)
-
     
     kerdes_45_mt()

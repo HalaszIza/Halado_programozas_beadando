@@ -1,9 +1,8 @@
 import random
 import tkinter as tk
 import sys
-import customtkinter as ctk #Designhoz
-from tkinter import messagebox
-from PIL import Image, ImageTk
+import customtkinter as ctk
+from PIL import Image
 from customtkinter import CTkImage
 import krd13
 
@@ -24,7 +23,6 @@ with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
             valaszok_01.append(sor_1[1].split())
             megoldas_1.append(sor_1[2])
 
-
 #6-7 kérdés
 def kerdesek67_ablak(foablak, kerdes_03, valaszok_03, megoldas_3, betuk):
     global kerdes_6_7
@@ -43,7 +41,6 @@ def kerdesek67_ablak(foablak, kerdes_03, valaszok_03, megoldas_3, betuk):
 
     helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Apostol", 12))
     helyes_e_lbl.pack(pady=10)
-
 
     kov_btn = ctk.CTkButton(uj_ablak, text="Következő kérdés", command=lambda: kov_kerdes(), state="disabled")
     kov_btn.pack(pady=10)

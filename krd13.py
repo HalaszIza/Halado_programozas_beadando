@@ -1,8 +1,6 @@
 import random
-import tkinter as tk
 import sys
 import customtkinter as ctk
-from tkinter import messagebox
 from PIL import Image
 from customtkinter import CTkImage
 import krd45
@@ -150,7 +148,6 @@ def kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk):
         ctk.CTkLabel(box, text="A válasz helytelen, a játéknak vége 😥", font=("Apostol", 14)).pack(pady=20)
         ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk)), font=("Apostol", 12)).pack(side=ctk.LEFT, padx=20)
         ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit()), font=("Apostol", 12)).pack(side=ctk.RIGHT, padx=20)
-
 
     kerdes_13_mt()
 

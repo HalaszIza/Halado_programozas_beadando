@@ -1,15 +1,9 @@
-import random
-import tkinter as tk
-import sys
 import customtkinter as ctk
-from tkinter import messagebox
-from PIL import Image, ImageTk
+from PIL import Image
 from customtkinter import CTkImage
 import krd13
 
-
 betuk = ['A)', 'B)', 'C)', 'D)']
-
 #Eső három kérdés
 with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
     
