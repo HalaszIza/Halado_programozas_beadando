@@ -38,13 +38,13 @@ foablak.geometry("800x600")
 pil_image = Image.open("Images/nje_logo.png")
 bg_image = CTkImage(light_image=pil_image, size=(800, 600))
 
-lbl = ctk.CTkLabel(foablak, text="Legyen Ön is mérnökinfós kvízjáték!\n\nFeladat 7 helyes válasz megadása.\nAz első 3 kérdés Neumann Jánosról fog szólni.\nAz utána következő négy pedig a Hálózatbiztonsági és üzemeltetési-és\n Ipari informatika specializációról fog szólni.\n\
-                   \n😜Kezdődhet a játék?😜", font=("Apostol", 18), image=bg_image)
+lbl = ctk.CTkLabel(foablak, text="Legyen Ön is mérnökinfós kvízjáték!\n\nFeladat 7 helyes válasz megadása.\nAz első 3 kérdés Neumann Jánosról fog szólni.\nAz utána következő négy pedig a Hálózatbiztonsági és üzemeltetési-és\n Ipari informatika specializációról.\n\
+                   \nKezdődhet a játék?😜", font=("Apostol", 18, "bold"), image=bg_image, text_color="#A32F2F")
 lbl.pack(padx=20, pady=20)
 lbl.place(relx=0, rely=0, relwidth=1, relheight=1)
 lbl.lower()
 
-eredmeny = ctk.CTkLabel(foablak, text="", font=("Arial", 12))
+eredmeny = ctk.CTkLabel(foablak, text="", font=("Apostol", 12))
 eredmeny.pack(pady=10)
 
 start_btn = ctk.CTkButton(foablak, text="Kezdjünk hozzá!", command=lambda: krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk))

@@ -41,7 +41,7 @@ def kerdesek67_ablak(foablak, kerdes_03, valaszok_03, megoldas_3, betuk):
     bg_label.place(x=0, y=0, relwidth=1, relheight=1)
     bg_label.lower()
 
-    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12))
+    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Apostol", 12))
     helyes_e_lbl.pack(pady=10)
 
 
@@ -64,7 +64,7 @@ def kerdesek67_ablak(foablak, kerdes_03, valaszok_03, megoldas_3, betuk):
 
         kerdes_6_7 = random.randint(0, len(kerdes_03) - 1)
         krd = kerdes_03[kerdes_6_7]
-        krd_lbl = ctk.CTkLabel(uj_ablak, text=krd, font=("Arial", 12))
+        krd_lbl = ctk.CTkLabel(uj_ablak, text=krd, font=("Apostol", 17, "bold"), fg_color="orange", corner_radius=5)
         krd_lbl.pack(padx=20, pady=20)
 
         gombok = []
@@ -117,19 +117,18 @@ def kerdesek67_ablak(foablak, kerdes_03, valaszok_03, megoldas_3, betuk):
         box.geometry("300x150")
         box.grab_set()
 
-        ctk.CTkLabel(box, text="A válasz helytelen, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
-        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk))).pack(side=ctk.LEFT, padx=20)
-        ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=ctk.RIGHT, padx=20)
+        ctk.CTkLabel(box, text="A válasz helytelen, a játéknak vége 😥", font=("Apostol", 14)).pack(pady=20)
+        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk)), font=("Apostol", 12)).pack(side=ctk.LEFT, padx=20)
+        ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit()), font=("Apostol", 12)).pack(side=ctk.RIGHT, padx=20)
 
     def show_exitbox():
         box = ctk.CTkToplevel(uj_ablak)
         box.title("Vége a játéknak.")
-        box.geometry("300x150")
+        box.geometry("400x150")
         box.grab_set()
 
-        ctk.CTkLabel(box, text="Minden kérdésre helyesen válaszoltál, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
-
-        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk))).pack(side=tk.LEFT, padx=20)
-        ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=tk.RIGHT, padx=20)
+        ctk.CTkLabel(box, text="Minden kérdésre helyesen válaszoltál, a játéknak vége.\nGRATULÁLUNK!", font=("Apostol", 16, "bold")).pack(pady=20)
+        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk)), font=("Apostol", 12)).pack(side=tk.LEFT, padx=20)
+        ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit()), font=("Apostol", 12)).pack(side=tk.RIGHT, padx=20)
 
     kerdes_67_mt()
