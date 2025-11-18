@@ -3,10 +3,12 @@ import tkinter as tk
 import sys
 import customtkinter as ctk #Designhoz
 from tkinter import messagebox
-#from customtkinter import * #Designhoz
-from PIL import Image, ImageTk #Designhoz
+from PIL import Image, ImageTk
 from customtkinter import CTkImage
 import krd13
+
+pil_image = Image.open("Images/nje_logo.png")
+bg_image = CTkImage(light_image=pil_image, size=(800, 600))
 
 #Eső három kérdés
 with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
@@ -31,18 +33,19 @@ def kerdesek67_ablak(foablak, kerdes_03, valaszok_03, megoldas_3, betuk):
     kerdesek_67 = 0
     kerdes_6_7  = 0 
 
-    uj_ablak = tk.Toplevel()
+    uj_ablak = ctk.CTkToplevel()
     uj_ablak.title("Játék!")
-    uj_ablak.geometry("600x500")
+    uj_ablak.geometry("800x600")
 
-    pil_image = Image.open("Images/nje_logo.png")
-    bg_image = CTkImage(light_image=pil_image, size=(800, 600))
+    bg_label = ctk.CTkLabel(uj_ablak, text="", image=bg_image)
+    bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+    bg_label.lower()
 
-    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12), image=bg_image)
-    helyes_e_lbl = tk.Label(uj_ablak, text="", font=("Arial", 12))
+    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12))
     helyes_e_lbl.pack(pady=10)
 
-    kov_btn = tk.Button(uj_ablak, text="Következő kérdés", command=lambda: kov_kerdes(), state="disabled")
+
+    kov_btn = ctk.CTkButton(uj_ablak, text="Következő kérdés", command=lambda: kov_kerdes(), state="disabled")
     kov_btn.pack(pady=10)
 
     #Következő 2 kérdés
@@ -61,13 +64,13 @@ def kerdesek67_ablak(foablak, kerdes_03, valaszok_03, megoldas_3, betuk):
 
         kerdes_6_7 = random.randint(0, len(kerdes_03) - 1)
         krd = kerdes_03[kerdes_6_7]
-        krd_lbl = tk.Label(uj_ablak, text=krd, font=("Arial", 12))
+        krd_lbl = ctk.CTkLabel(uj_ablak, text=krd, font=("Arial", 12))
         krd_lbl.pack(padx=20, pady=20)
 
         gombok = []
         for i in range(4):
             btn_sz = valaszok_03[kerdes_6_7][i]
-            vlsz_btn = tk.Button(uj_ablak, text= betuk[i] + btn_sz, 
+            vlsz_btn = ctk.CTkButton(uj_ablak, text= betuk[i] + btn_sz, 
                                     command=lambda txt=btn_sz: (krd_ell(txt, kov_btn), gomb_sz(vlsz_btn.cget("text"))))
             
             gombok.append(vlsz_btn)
@@ -119,14 +122,14 @@ def kerdesek67_ablak(foablak, kerdes_03, valaszok_03, megoldas_3, betuk):
         ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=ctk.RIGHT, padx=20)
 
     def show_exitbox():
-        box = tk.Toplevel(uj_ablak)
+        box = ctk.CTkToplevel(uj_ablak)
         box.title("Vége a játéknak.")
         box.geometry("300x150")
         box.grab_set()
 
-        tk.Label(box, text="Minden kérdésre helyesen válaszoltál, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
+        ctk.CTkLabel(box, text="Minden kérdésre helyesen válaszoltál, a játéknak vége.", font=("Arial", 12)).pack(pady=20)
 
-        tk.Button(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk))).pack(side=tk.LEFT, padx=20)
-        tk.Button(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=tk.RIGHT, padx=20)
+        ctk.CTkButton(box, text="Új játék", command=lambda: (box.destroy(), uj_ablak.destroy(), krd13.kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk))).pack(side=tk.LEFT, padx=20)
+        ctk.CTkButton(box, text="Kilépés", command=lambda: (box.destroy(), uj_ablak.destroy(), sys.exit())).pack(side=tk.RIGHT, padx=20)
 
     kerdes_67_mt()

@@ -1,13 +1,15 @@
 import random
 import tkinter as tk
 import sys
-import customtkinter as ctk #Designhoz
+import customtkinter as ctk
 from tkinter import messagebox
-#from customtkinter import * #Designhoz
-from PIL import Image, ImageTk #Designhoz
+from PIL import Image, ImageTk
 from customtkinter import CTkImage
 import krd67
 import krd13
+
+pil_image = Image.open("Images/nje_logo.png")
+bg_image = CTkImage(light_image=pil_image, size=(800, 600))
 
 #Eső három kérdés
 with open("kerdesek_valaszok_01.txt", "r", encoding="utf-8") as file_1:
@@ -48,7 +50,12 @@ def kerdesek45_ablak(foablak, kerdes_02, valaszok_02, megoldas_2, betuk):
 
     uj_ablak = ctk.CTkToplevel()
     uj_ablak.title("Játék!")
-    uj_ablak.geometry("600x500")
+    uj_ablak.geometry("800x600")
+
+    bg_label = ctk.CTkLabel(uj_ablak, text="", image=bg_image)
+    bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+    bg_label.lower()
+
 
     helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12))
     helyes_e_lbl.pack(pady=10)

@@ -1,15 +1,12 @@
 import random
 import tkinter as tk
 import sys
-import customtkinter as ctk #Designhoz
+import customtkinter as ctk
 from tkinter import messagebox
-#from customtkinter import * #Designhoz
-from PIL import Image, ImageTk #Designhoz
+from PIL import Image, ImageTk
 from customtkinter import CTkImage
 import krd13
 
-#Design elemek
-#set_appearance_mode("dark")
 
 betuk = ['A)', 'B)', 'C)', 'D)']
 

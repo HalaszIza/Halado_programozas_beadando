@@ -1,12 +1,15 @@
 import random
 import tkinter as tk
 import sys
-import customtkinter as ctk #Designhoz
+import customtkinter as ctk
 from tkinter import messagebox
-#from customtkinter import * #Designhoz
-from PIL import Image, ImageTk #Designhoz
+from PIL import Image
 from customtkinter import CTkImage
 import krd45
+
+pil_image = Image.open("Images/nje_logo.png")
+bg_image = CTkImage(light_image=pil_image, size=(800, 600))
+
 
 #Második két kérdés
 with open("kerdesek_valaszok_02.txt", "r", encoding="utf-8") as file_2:
@@ -41,13 +44,12 @@ def kerdesek13_ablak(foablak, kerdes_01, valaszok_01, megoldas_1, betuk):
     uj_ablak.title("Játék!")
     uj_ablak.geometry("800x600")
 
-    pil_image = Image.open("Images/nje_logo.png")
-    bg_image = CTkImage(light_image=pil_image, size=(800, 600))
+    bg_label = ctk.CTkLabel(uj_ablak, text="", image=bg_image)
+    bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+    bg_label.lower()
 
-    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12), image=bg_image)
+    helyes_e_lbl = ctk.CTkLabel(uj_ablak, text="", font=("Arial", 12), fg_color="transparent") #fg_color="transparent"
     helyes_e_lbl.pack(pady=10)
-    helyes_e_lbl.place(relx=0, rely=0, relwidth=1, relheight=1)
-    helyes_e_lbl.lower()
 
 
     kov_btn = ctk.CTkButton(uj_ablak, text="Következő kérdés", command=lambda: kov_kerdes(), state="disabled")
